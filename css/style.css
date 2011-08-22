@@ -8,5 +8,9 @@
 .sub-region.content-teaser-list .list-item {
   border-bottom: 1px solid #E5E5E5;
   padding: 1%;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FCFCFC), color-stop(0.4, #ECECEC), to(#FCFCFC));
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F1F1F1), color-stop(0.3, #FCFCFC), to(#F5F5F5));
+}
+
+.sub-region.content-teaser-list .list-item.active {
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F0F0F0), color-stop(0.3, #F5F5F5), to(#EFEFEF));
 }
