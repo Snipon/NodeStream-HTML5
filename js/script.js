@@ -39,13 +39,13 @@ $(document).ready(function(){
     $('<div/>',{
       'class': 'news-list-item',
       html: formatted_articles_data[0]
-      }).appendTo('#home');
+      }).appendTo('#content-teaser-list');
     
     $('<div/>',{
       'class': 'news-item',
-      'id': 'nid_' + data.nid,
+      //'id': 'nid_' + data.nid,
       html: formatted_articles_data[1].join('')
-      }).appendTo('body');
+      }).appendTo('#content');
     
   });
 });

@@ -1,0 +1,23 @@
+
+/*iPhone device width 320px*/
+@media screen and (max-width: 320px){
+ 
+}
+/*iPhone device width 480px*/
+@media screen and (max-width: 480px){
+ 
+}
+
+/*iPad device width 768px*/
+@media screen and (max-width: 768px){
+
+}
+
+/*iPad device width 1024px*/
+@media screen and (max-width: 1024px){
+  .content-teaser-list
+  {
+    width:320px;
+    float:left;
+  }
+}
