@@ -12,7 +12,7 @@ ns.articles = {
       ns.articles.items[this.nid] = ns.articles._buildItem(this);
     });
     
-    return [this.list, this.items];
+    return this.list;
   },
 
 
@@ -25,9 +25,8 @@ ns.articles = {
       var lang = this.language;
       
       articlesList += "<div class='list-item'>"; //replace with JQuery for nicer looks
-//      articlesList += "<a href='#" + this.nid + "'><h2>" + this.title + '</h2></a>';
       articlesList += "<a href='" + this.nid + "'><h2 class='title'>" + this.title + '</h2></a>';
-      articlesList += "<span class='created'>" + nodeDate(this.created) + '</span>'; // to better format...
+      articlesList += "<span class='created'>" + nodeDate(this.created) + '</span>';
       articlesList += "</div>";
     });
     
@@ -38,12 +37,17 @@ ns.articles = {
   /* Construct full node representation */  
   _buildItem: function(data){
 
+    var lang = this.language;
+    // insted of something.und[0].stuff, use something[lang][0].stuff to make it language agnostic
+
     articleNode = '';
     
     articleNode += "<div id='" + data.nid + "'class='article-item'>";
     articleNode += "<h2 class='title'>" + data.title + "</h2>";
     articleNode += "<span class='created'>" + nodeDate(data.created) + "</span>";
     articleNode += "</div>";
+    
+    console.log(data);
     
     return articleNode;
   
