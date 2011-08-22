@@ -6,8 +6,8 @@
 }
 
 .sub-region.content-teaser-list .list-item {
-  border-bottom: 1px solid #E5E5E5;
-  border-right: 1px solid #E5E5E5;
+  border: solid #E5E5E5;
+  border-width: 0 1px 1px 1px;
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F1F1F1), color-stop(0.3, #FCFCFC), to(#F5F5F5));
 }
 
