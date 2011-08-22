@@ -40,7 +40,7 @@ ns.articles = {
 
     articleNode = '';
     
-    articleNode += "<div id='" + data.nid + "'class='article-item'>";
+    articleNode += "<div id='nid_" + data.nid + "'class='article-item'>";
     articleNode += "<h2>" + data.title + "</h2>";
     articleNode += "<span>" + data.created + "</span>";
     articleNode += "</div>";
