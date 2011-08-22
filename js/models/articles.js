@@ -9,7 +9,7 @@ ns.articles = {
     this.list = ns.articles._buildList(data);
     
     $.each(data, function() {
-      ns.articles.items.push(ns.articles._buildItem(this));
+      ns.articles.items[this.nid] = ns.articles._buildItem(this);
     });
     
     return [this.list, this.items];
@@ -25,7 +25,7 @@ ns.articles = {
       var lang = this.language;
       
       articlesList += "<div class='list-item'>"; //replace with JQuery for nicer looks
-      articlesList += "<a href='#nid_" + this.nid + "'><h2>" + this.title + '</h2></a>';
+      articlesList += "<a href='#" + this.nid + "'><h2>" + this.title + '</h2></a>';
       articlesList += '<span>' + this.created + '</span>'; // to better format...
       articlesList += "</div>";
     });
@@ -36,11 +36,10 @@ ns.articles = {
 
   /* Construct full node representation */  
   _buildItem: function(data){
-    console.log(data);
 
     articleNode = '';
     
-    articleNode += "<div id='nid_" + data.nid + "'class='article-item'>";
+    articleNode += "<div id='" + data.nid + "'class='article-item'>";
     articleNode += "<h2>" + data.title + "</h2>";
     articleNode += "<span>" + data.created + "</span>";
     articleNode += "</div>";
