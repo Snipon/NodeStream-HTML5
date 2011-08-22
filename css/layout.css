@@ -19,8 +19,15 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
 /**
  * Content list
  */
-.region.content-teaser-list,
-.region.content {
+.sub-region.content-teaser-list,
+.sub-region.content {
   float: left;
-  clear: both;
+}
+
+.sub-region.content-teaser-list {
+  width: 25%;
+}
+
+.sub-region.content {
+  widows: 75%
 }

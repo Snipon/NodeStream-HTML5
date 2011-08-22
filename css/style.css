@@ -1,0 +1,12 @@
+/**
+ * Content teaser
+ */
+.sub-region.content-teaser-list {
+  border-right: 1px solid #E5E5E5;
+}
+
+.sub-region.content-teaser-list .list-item {
+  border-bottom: 1px solid #E5E5E5;
+  padding: 1%;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FCFCFC), color-stop(0.4, #ECECEC), to(#FCFCFC));
+}
