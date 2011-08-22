@@ -29,6 +29,10 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
   margin-right: 2%
 }
 
+.sub-region.content-teaser-list a {
+  display: block;
+}
+
 .sub-region.content {
   widows: 75%
 }
