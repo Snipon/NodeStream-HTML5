@@ -2,19 +2,34 @@
  * Content teaser
  */
 .sub-region.content-teaser-list {
-  border-top: 1px solid #E5E5E5;
+/*  border-top: 1px solid #E5E5E5; */
 }
 
 .sub-region.content-teaser-list .list-item {
   border: solid #E5E5E5;
   border-width: 0 1px 1px 1px;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F1F1F1), color-stop(0.3, #FCFCFC), to(#F5F5F5));
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EBEBEB), color-stop(0.3, #ECECEC), to(#B1B1B1));
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  
+  border: 1px solid #999;
+  
+  -moz-box-shadow: 2px 2px 2px #ddd;
+  -webkit-box-shadow: 2px 2px 2px #ddd;
+  box-shadow: 2px 2px 2px #ddd;
 }
 
 .sub-region.content-teaser-list .list-item.active {
-  border-right: none;
+/*  border-right: none; */
 }
 
 .sub-region.content-teaser-list .list-item.active {
-  background: #FFF;
+/*  background: #FFF; */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B1B1B1), color-stop(0.3, #ECECEC), to(#EBEBEB));
+  
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }

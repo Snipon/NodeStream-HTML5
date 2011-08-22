@@ -36,5 +36,10 @@ h4 {
  */
 .content-teaser-list a {
   text-decoration: none;
-  color: #000;
+  color: #333;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.content-teaser-list .active a {
+  color: #111;
 }

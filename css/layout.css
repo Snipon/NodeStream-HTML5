@@ -39,6 +39,17 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
 
 .sub-region.content-teaser-list .list-item {
   padding: 3%;
+  margin-right: 3%;
+  margin-bottom: 10px;
+   -webkit-transition: margin .1s linear;
+   transition: margin .1s linear;
+}
+
+.sub-region.content-teaser-list .list-item:hover,
+.sub-region.content-teaser-list .list-item.active {
+  margin-right: 0%;
+/*   -webkit-transition: margin .1s linear;
+   transition: margin .1s linear; */
 }
 
 .sub-region.content-teaser-list a {
