@@ -16,7 +16,9 @@ $(document).ready(function(){
       event.preventDefault();
       $('.list-item.active').removeClass("active");
       $(this).parent().addClass("active");
-    });        
+    });
+    
+    $('.news-list-item a:first').trigger('click');
     
   }); /* /getJSON */
     
