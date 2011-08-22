@@ -6,5 +6,5 @@
  *
  */
 ns = {
-  url: 'node.json',
+  url: 'nodes.json',
 };

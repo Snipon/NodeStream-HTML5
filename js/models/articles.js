@@ -1,27 +1,51 @@
 ns.articles = {
   
-  list: 'test',
-  items: ['1', '23'],
+  list: '',
+  items: [],
 
+  /* Constructor */
   create: function(data){
-  
+    
+    this.list = ns.articles._buildList(data);
+    
+    $.each(data, function() {
+      ns.articles.items.push(ns.articles._buildItem(this));
+    });
+    
     return [this.list, this.items];
   },
-  
-  build_list: function(){
-    /* Create list representation */
-    var list_data = '';
-    list_data += "<a href='#nid_" + data.nid + "'><h2>" + data.title + '</h2></a>';
-    list_data += '<span>' + data.created + '</span>'; // to better format...
-    list_data += '<p>' + data.field_ns_article_lead[lang][0].safe_value + '</p>';
+
+
+  /* Create list representation */  
+  _buildList: function(data){
+
+    articlesList = '';
+    
+    $.each(data, function() {
+      var lang = this.language;
+      
+      articlesList += "<div class='list-item'>"; //replace with JQuery for nicer looks
+      articlesList += "<a href='#nid_" + this.nid + "'><h2>" + this.title + '</h2></a>';
+      articlesList += '<span>' + this.created + '</span>'; // to better format...
+      articlesList += "</div>";
+    });
+    
+    return articlesList;
   },
+
+
+  /* Construct full node representation */  
+  _buildItem: function(data){
+    console.log(data);
+
+    articleNode = '';
+    
+    articleNode += "<div id='" + data.nid + "'class='article-item'>";
+    articleNode += "<h2>" + data.title + "</h2>";
+    articleNode += "<span>" + data.created + "</span>";
+    articleNode += "</div>";
+    
+    return articleNode;
   
-  build_item: function(){
-    /* Construct full node representation */
-    var full_data = '';    
-    full_data += '<h2>' + data.title + '</h2>';
-    full_data += '<span>' + data.created + '</span>'; // to better format...
-    full_data += '<p><em>' + data.field_ns_article_kicker[lang][0].safe_value + '</em></p>';
-    full_data += '<p>' + data.field_ns_article_body[lang][0].safe_value + '</p>';
   },
 }
