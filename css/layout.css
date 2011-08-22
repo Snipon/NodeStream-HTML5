@@ -7,3 +7,20 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
   list-style: none;
   list-style-image: none;
 }
+
+/**
+ * General
+ */
+.region {
+  width: 100%;
+  overflow: hidden;
+}
+
+/**
+ * Content list
+ */
+.region.content-teaser-list,
+.region.content {
+  float: left;
+  clear: both;
+}
