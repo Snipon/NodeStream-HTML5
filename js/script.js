@@ -1,12 +1,10 @@
-/* 
-// JQuery AJAX...
 $(document).ready(function(){
       
   // replace... Unauthenticated call.
-  var ns_url = '/drupal7services/testservice/node/';
-  var node_id = 1;
+  var ns_url = 'node.json';
       
-  $.getJSON(ns_url + node_id, function(data){
+  $.getJSON(ns_url, function(data){
+
     var items = [];
     $.each(data, function(key, val) {
       items.push('<li>' + key + " => " + val + '</li>');
@@ -16,5 +14,6 @@ $(document).ready(function(){
       'class': 'my-new-list',
       html: items.join('')
       }).appendTo('body');
+      
   });
-}); */
+});
