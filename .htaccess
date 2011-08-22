@@ -1,0 +1,7 @@
+# Makes sure cache_manifest.php isn't cached by HTTP semantics
+# See http://diveintohtml5.org/offline.html for more info
+
+<Files cache_manifest.php>
+ExpiresActive On
+ExpiresDefault "access"
+</Files>
