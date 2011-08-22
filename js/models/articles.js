@@ -27,7 +27,7 @@ ns.articles = {
       articlesList += "<div class='list-item'>"; //replace with JQuery for nicer looks
 //      articlesList += "<a href='#" + this.nid + "'><h2>" + this.title + '</h2></a>';
       articlesList += "<a href='" + this.nid + "'><h2>" + this.title + '</h2></a>';
-      articlesList += '<span>' + this.created + '</span>'; // to better format...
+      articlesList += '<span>' + nodeDate(this.created) + '</span>'; // to better format...
       articlesList += "</div>";
     });
     
@@ -42,7 +42,7 @@ ns.articles = {
     
     articleNode += "<div id='" + data.nid + "'class='article-item'>";
     articleNode += "<h2>" + data.title + "</h2>";
-    articleNode += "<span>" + data.created + "</span>";
+    articleNode += "<span>" + nodeDate(data.created) + "</span>";
     articleNode += "</div>";
     
     return articleNode;
