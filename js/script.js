@@ -1,19 +1,17 @@
 $(document).ready(function(){
       
-  // replace... Unauthenticated call.
   var ns_url = 'node.json';
       
   $.getJSON(ns_url, function(data){
+    
+    var formatted_data = '';
+    formatted_data += '<h2>' + data.title + '</h2>';
+//    formatted_data += '<div>' + data.body + '</div>';
 
-    var items = [];
-    $.each(data, function(key, val) {
-      items.push('<li>' + key + " => " + val + '</li>');
-    });
-
-    $('<ul/>', {
-      'class': 'my-new-list',
-      html: items.join('')
-      }).appendTo('body');
+    $('<div/>', {
+      'class': 'news-list',
+      html: formatted_data
+      }).appendTo('.content');
       
   });
 });
