@@ -1,10 +1,28 @@
+/**
+ * Temp stuff
+ */
+ 
 body {
   background: #ECECEC;
 }
 
 .wrapper {
-  padding: 1%;
   width: 78%;
   background: #FFF;
-  margin: auto;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.region {
+  padding: 1%;
+}
+
+.region.branding {
+    border-bottom: 0.4em solid #ECECEC;
+}
+
+.region.closure {
+    border-top: 0.4em solid #ECECEC;
 }
