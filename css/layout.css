@@ -16,6 +16,14 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
   overflow: hidden;
 }
 
+.branding {
+  margin-bottom: 2%;
+}
+
+.closure {
+  margin-top: 2%;
+}
+
 /**
  * Content list
  */
@@ -27,6 +35,10 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
 .sub-region.content-teaser-list {
   width: 23%;
   margin-right: 2%
+}
+
+.sub-region.content-teaser-list .list-item {
+  padding: 3%;
 }
 
 .sub-region.content-teaser-list a {

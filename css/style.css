@@ -3,11 +3,11 @@
  */
 .sub-region.content-teaser-list {
   border-right: 1px solid #E5E5E5;
+  border-top: 1px solid #E5E5E5;
 }
 
 .sub-region.content-teaser-list .list-item {
   border-bottom: 1px solid #E5E5E5;
-  padding: 1%;
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F1F1F1), color-stop(0.3, #FCFCFC), to(#F5F5F5));
 }
 
