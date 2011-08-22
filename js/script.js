@@ -4,6 +4,10 @@ $(document).ready(function(){
     
     console.log(data);
     
+    var formatted_data = '';
+    formatted_data += '<h2>' + data.title + '</h2>';
+    formatted_data += '<div>' + nodeDate(data.created) + '</div>'; // to better format...
+    formatted_data += '<p>' + data.field_ns_article_lead.und[0].safe_value + '</p>'; // to better format...
     var lang = data.language;
     
     /* Create list representation */
