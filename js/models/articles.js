@@ -25,7 +25,8 @@ ns.articles = {
       var lang = this.language;
       
       articlesList += "<div class='list-item'>"; //replace with JQuery for nicer looks
-      articlesList += "<a href='#" + this.nid + "'><h2>" + this.title + '</h2></a>';
+//      articlesList += "<a href='#" + this.nid + "'><h2>" + this.title + '</h2></a>';
+      articlesList += "<a href='" + this.nid + "'><h2>" + this.title + '</h2></a>';
       articlesList += '<span>' + this.created + '</span>'; // to better format...
       articlesList += "</div>";
     });

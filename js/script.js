@@ -8,13 +8,25 @@ $(document).ready(function(){
       'class': 'news-list-item',
       html: formatted_articles_data[0]
       }).appendTo('#content-teaser-list');
-    
-    $('<div/>',{
+
+    $('.news-list-item a').bind('click', function(event){
+      
+    // '#shown-article'
+    $("#shown-article").replaceWith("<div id='shown-article'>" + ns.articles.items[$(this).attr('href')] + '</div>');
+/*    $('<div/>',{
       'class': 'news-item',
-      //'id': 'nid_' + data.nid,
+      html: ns.articles.items[$(this).attr('href')]
+      }).appendTo('#content'); */
+      
+      event.preventDefault();
+            
+    });
+
+/*    $('<div/>',{
+      'class': 'news-item',
       html: formatted_articles_data[1].join('')
       }).appendTo('#content');
-    
-    console.log(ns.articles.items);
+*/
+      
   });
 });
