@@ -9,10 +9,10 @@ $(document).ready(function(){
       html: formatted_articles_data
       }).appendTo('#content-teaser-list');
 
+    // Could/should this be moved to the model?
     $('.news-list-item a').bind('click', function(event){      
       $("#shown-article").replaceWith("<div id='shown-article'>" + ns.articles.items[$(this).attr('href')] + '</div>');
       event.preventDefault();
-
 /*    
       Idea:
       - remove active class from whatever object has it,
@@ -26,8 +26,8 @@ $(document).ready(function(){
         remove active css-class...
       });
 */
-
-    });
-    
+      $('.list-item.active').removeClass("active");
+      $(this).parent().addClass("active");
+    });    
   });
 });

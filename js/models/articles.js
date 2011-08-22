@@ -47,8 +47,6 @@ ns.articles = {
     articleNode += "<span class='created'>" + nodeDate(data.created) + "</span>";
     articleNode += "</div>";
     
-    console.log(data);
-    
     return articleNode;
   
   },
