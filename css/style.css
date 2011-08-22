@@ -6,6 +6,10 @@ body {
   background: #ECECEC;
 }
 
+p {
+  margin: 0 0 2% 0;
+}
+
 .wrapper {
   width: 78%;
   background: #FFF;
@@ -26,3 +30,27 @@ body {
 .region.closure {
     border-top: 0.4em solid #ECECEC;
 }
+
+.news-list {
+  margin: 0;
+  padding: 0;
+}
+
+.list-item {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  padding-left: 20%;
+  margin-bottom: 5%
+}
+
+.list-item .teaser-image {
+  float: left;
+  margin-left: -20%;
+  width: 20%;
+}
+
+.list-item .teaser-image img {
+  float: left;
+}
+
