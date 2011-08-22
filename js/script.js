@@ -1,7 +1,8 @@
 $(document).ready(function(){
+  console.log('document.ready');
       
   $.getJSON(ns.url, function(data){
-      
+  
     var formatted_articles_data = ns.articles.create(data);
     
     $('<div/>',{
@@ -13,21 +14,10 @@ $(document).ready(function(){
     $('.news-list-item a').bind('click', function(event){      
       $("#shown-article").replaceWith("<div id='shown-article'>" + ns.articles.items[$(this).attr('href')] + '</div>');
       event.preventDefault();
-/*    
-      Idea:
-      - remove active class from whatever object has it,
-      - add active class to currently active object
-      
-      //trigger event('not-active', function(){
-        $(.news-list-item a.active).toggle(remove active class...);
-//      };
-      $(this).toggle(active-class...)
-      $(this).bind('not-active', function(){
-        remove active css-class...
-      });
-*/
       $('.list-item.active').removeClass("active");
       $(this).parent().addClass("active");
-    });    
-  });
+    });        
+    
+  }); /* /getJSON */
+    
 });
