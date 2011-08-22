@@ -3,11 +3,11 @@ $(document).ready(function(){
       
   $.getJSON(ns.url, function(data){
   
-    var formatted_articles_data = ns.articles.create(data);
+    var formatted_articles_list = ns.articles.create(data);
     
     $('<div/>',{
       'class': 'news-list-item',
-      html: formatted_articles_data
+      html: formatted_articles_list
       }).appendTo('#content-teaser-list');
 
     // Could/should this be moved to the model?

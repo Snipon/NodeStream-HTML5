@@ -35,7 +35,7 @@ function handleAppcacheError() {
   }
 }
 
-// Should replace document.ready later
+// Should replace document.ready
 function initializeApplication(){
   console.log('initialize');
 }

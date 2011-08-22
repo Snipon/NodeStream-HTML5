@@ -4,7 +4,7 @@
  *
  * Not implemented yet.
  */
- 
+
 ns.i18n.strings = {
   'Back': 'Tillbaka',
   'Login': 'Logga in',
