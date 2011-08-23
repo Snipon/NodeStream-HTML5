@@ -16,8 +16,11 @@ $(document).ready(function(){
       event.preventDefault();
       $('.list-item.active').removeClass("active");
       $(this).parent().addClass("active");
-      $('#shown-article').click(function(){
-        $(this).fadeOut(500);
+      
+      $('#shown-article').append('<div class="close" />');
+      // 
+      $('#shown-article .close').click(function(){
+        $(this).parent().fadeOut(500);
         $('.list-item.active').removeClass("active");
       });
     });
