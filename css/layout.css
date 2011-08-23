@@ -56,51 +56,9 @@ img, embed, object, iframe {
 .sub-region.content-teaser-list a {
   display: block;
   padding: 3%;
-
 }
 
 .sub-region.content {
   width: 62.5%;
   background: #FFF;
-}
-
-/**
- * Media query test
- */
-@media screen and (max-width: 768px) {
-
-  .sub-region.content-teaser-list,
-  .sub-region.content  {
-    min-width: 100%;
-    margin: 0;
-  }
-
-  .sub-region.content #shown-article {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 3%;
-    margin: 3%;
-    z-index: 100;
-    min-height: 88%;
-    min-width: 88%;
-    background: #FFF;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-  
-  .sub-region.content .close {
-    width: 15px;
-    height: 15px;
-    background: red;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  
-  .sub-region.content-teaser-list .list-item,
-  .sub-region.content-teaser-list .list-item:hover,
-  .sub-region.content-teaser-list .list-item.active {
-    margin-right: 0;
-  }
 }
