@@ -16,6 +16,10 @@ $(document).ready(function(){
       event.preventDefault();
       $('.list-item.active').removeClass("active");
       $(this).parent().addClass("active");
+      $('#shown-article').click(function(){
+        $(this).fadeOut(500);
+        $('.list-item.active').removeClass("active");
+      });
     });
     
     $('.news-list-item a:first').trigger('click');

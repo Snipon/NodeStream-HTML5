@@ -8,6 +8,10 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
   list-style-image: none;
 }
 
+img, embed, object, iframe {
+  max-width: 100%;
+}
+
 /**
  * General
  */
@@ -33,7 +37,7 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
 }
 
 .sub-region.content-teaser-list {
-  width: 23%;
+  width: 27.5%;
   margin-right: 2%
 }
 
@@ -45,7 +49,6 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
    transition: margin .1s linear;
 }
 
-.sub-region.content-teaser-list .list-item:hover,
 .sub-region.content-teaser-list .list-item.active {
   margin-right: 0%;
 }
@@ -55,5 +58,40 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
 }
 
 .sub-region.content {
-  widows: 75%
+  width: 62.5%;
+  background: #FFF;
+}
+
+/**
+ * Media query test
+ */
+@media screen and (max-width: 600px) {
+
+  .sub-region.content-teaser-list,
+  .sub-region.content  {
+    width: 100%;
+    margin: 0;
+  }
+
+  .sub-region.content #shown-article {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 3%;
+    z-index: 100;
+    height: 100%;
+    width: 600px;
+    background: #FFF;
+  }
+  
+  .sub-region.content .close {
+    width: 10px;
+    height: 10px;
+    background: red;
+  }
+  
+  .sub-region.content-teaser-list .list-item,
+  .sub-region.content-teaser-list .list-item.active {
+    margin-right: 0;
+  }
 }
